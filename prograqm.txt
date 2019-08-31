@@ -1,0 +1,136 @@
+#include<iostream>
+#include<math.h>
+#include<string.h>
+using namespace std;
+int a,b,c,d,e,f;
+class donuts
+{
+	private:int g;
+	public:void getdata()
+	{
+		int h,i;
+		cout<<"enter the number of boxes of donuts required";
+		cin>>g;
+		if(g==1)
+		{
+		cout<<"prize for one box is ";
+		h=8;
+		i=6;
+		cout<<8<<"E";
+		cout<<i<<"pieces\n";
+		}
+		if(g==2)
+		{
+			cout<<"prize for two boxes are ";
+			h=16;
+			i=12;
+			cout<<16<<"E";
+			cout<<i<<"pieces\n";
+		}
+		if(g==3)
+		{
+			cout<<"prize for three boxes are ";
+			h=20;
+			i=18;
+			cout<<h<<"E";
+			cout<<i<<"pieces\n";
+		}
+		if(g>3)
+		{
+		cout<<"prize for "<<g<<" boxes is ";
+		h=g*6;
+		cout<<h<<" E\n";
+		cout<<"number of pieces in "<<g<<" boxes";
+		i=g*6;
+		cout<<i<<"pieces\n";
+	}
+        a=h;
+        b=i;
+	}
+};
+class muffins
+{
+	private:int j,k,l;
+    public:void getdata()
+    {
+    	cout<<"enter the number of muffin boxes required";
+    	cin>>j;
+    	if(j==1)
+    	{
+    		cout<<"prize for one box of muffins is:";
+    		k=15;
+    		l=5;
+    		cout<<k<<"E";
+    		cout<<l<<"pieces";
+		}
+		if(j==2)
+		{
+			cout<<"pize for two boxes of muffins are:";
+			k=30;
+			l=10;
+			cout<<k<<"E";
+			cout<<l<<"pieces";
+		}
+		if(j==3)
+		{
+			cout<<"prize of three boxes of muffins are:";
+			k=45;
+			l=15;
+			cout<<k<<"E";
+			cout<<l<<"pieces";
+		}
+		if(j>3)
+		{
+    	cout<<"prize for "<<j<<" boxes ";
+    	k=j*12;
+    	cout<<k<<" AUD\n";
+    	cout<<"number of pieces in "<<j<<" muffin boxes ";
+    	l=j*4;
+    	cout<<l<<"pieces";
+        }
+		c=k;
+	    d=l;
+	}
+};
+int main()
+{
+	int total,payment,tp;
+	donuts m;
+	muffins n;
+	m.getdata();
+	n.getdata();
+	total=a+c;
+	tp=b+d;
+	cout<<"  total amount:";
+	cout<<total;
+	cout<<"  total pieces:";
+	cout<<tp;
+	cout<<"1.card-debit/credit";
+	cout<<"2.bhim-UPI";
+	cout<<"3.cash";
+	cin>>payment;
+	switch(payment)
+	{
+		case 1:int cardnum[16],expirydate[4],cvv[3],pin[4];
+		cout<<"enter the card number";
+		cin>>cardnum[16];
+		cout<<"expiry date:";
+		cin>>expirydate[4];
+		cout<<" cvv:";
+		cin>>cvv[3];
+		cout<<"enter pin";
+		cin>>pin[4];
+		cout<<"payment done!!"<<endl;break;
+		case 2:int phnum[10],otp[4];
+		cout<<"enter ur UPI ph num:";
+		cin>>phnum[10];
+		cout<<"enter OTP";
+		cin>>otp[4];break;
+		case 3:int amount,change;
+		cout<<"enter the given amount:";
+		cin>>amount;
+		cout<<"ED";
+		change=amount-total;
+		cout<<change;
+	}
+}
